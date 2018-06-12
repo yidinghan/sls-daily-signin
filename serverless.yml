@@ -8,6 +8,15 @@ plugins:
 provider:
   name: aws
   runtime: nodejs8.10
+  stage: prod
+  memorySize: 256
+  region: ap-southeast-1
+  # environment:
+  # iamRoleStatements:
+  #   - Effect: Allow
+  #     Action:
+  #       - "sns:Publish"
+  #     Resource: "arn:aws:sns:*:*:lantouzi-bx"
 
 functions:
   hello:
