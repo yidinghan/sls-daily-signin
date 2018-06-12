@@ -26,7 +26,7 @@ module.exports = {
   },
   target: 'node',
   module: {
-    loaders: [
+    rules: [
       { test: /\.ts(x?)$/, loader: 'ts-loader' },
     ],
   },
