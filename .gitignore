@@ -65,3 +65,6 @@ typings/
 
 # serverless build output
 .serverless
+
+# build output
+.build
