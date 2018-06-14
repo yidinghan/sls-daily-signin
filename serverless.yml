@@ -21,9 +21,3 @@ functions:
       - http:
           method: get
           path: debug
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          method: get
-          path: hello
