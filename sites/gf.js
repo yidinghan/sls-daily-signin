@@ -7,6 +7,7 @@ const main = async () => {
 
   const title = await page.title();
 
+  await page.browser().close();
   return title;
 };
 

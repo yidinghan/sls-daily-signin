@@ -1,30 +1,31 @@
 const chrome = require('./lib/chrome');
 const gf = require('./sites/gf');
 
-const pgf = async (event, context, callback) => {
+const pgf = async (e, ctx, cb) => {
   const result = await gf.main();
   const response = {
     statusCode: 200,
     body: JSON.stringify({
       result,
-      input: event,
+      e,
     }),
   };
 
-  callback(null, response);
+  ctx.callbackWaitsForEmptyEventLoop = false;
+  cb(null, response);
 };
 
-const debug = async (event, context, callback) => {
+const debug = async (e, ctx, cb) => {
   const version = await chrome.version();
   const response = {
     statusCode: 200,
     body: JSON.stringify({
       version,
-      input: event,
+      e,
     }),
   };
 
-  callback(null, response);
+  cb(null, response);
 };
 
 module.exports = { debug, pgf };
