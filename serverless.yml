@@ -1,10 +1,9 @@
 service:
-  name: aws-nodejs-typescript
+  name: daily-signin
 
 # Add the serverless-webpack plugin
 plugins:
   - serverless-plugin-chrome
-  - serverless-webpack
 
 custom:
   chrome:
@@ -26,12 +25,6 @@ provider:
   #     Resource: "arn:aws:sns:*:*:lantouzi-bx"
 
 functions:
-  debug:
-    handler: handler.debug
-    events:
-      - http:
-          method: get
-          path: debug
   hello:
     handler: handler.hello
     events:
