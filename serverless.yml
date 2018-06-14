@@ -18,6 +18,8 @@ provider:
 functions:
   pgf:
     handler: handler.pgf
+    environment:
+      DEBUG: sls-chrome
     events:
       - http:
           method: get
