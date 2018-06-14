@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "sourceMap": true,
+    "allowJs": true,
     "lib": ["es2018"],
     "target": "es6"
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["./handler.js"]
 }

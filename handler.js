@@ -1,3 +1,5 @@
+const chrome = require('./lib/chrome');
+
 const hello = (event, context, callback) => {
   const response = {
     statusCode: 200,
@@ -13,4 +15,18 @@ const hello = (event, context, callback) => {
   // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
 };
 
-module.exports = { hello };
+const debug = async (event, context, callback) => {
+  const version = await chrome.version();
+
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify({
+      version,
+      input: event,
+    }),
+  };
+
+  callback(null, response);
+};
+
+module.exports = { hello, debug };
