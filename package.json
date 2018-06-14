@@ -8,6 +8,9 @@
   },
   "dependencies": {
     "@serverless-chrome/lambda": "^1.0.0-48",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "node-fetch": "^2.1.2",
     "puppeteer": "^1.5.0"
   },
