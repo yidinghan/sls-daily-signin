@@ -5,7 +5,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: prod
-  memorySize: 512
+  memorySize: 256
   region: ap-southeast-1
   timeout: 30
   # environment:
