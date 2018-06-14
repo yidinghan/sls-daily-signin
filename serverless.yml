@@ -5,8 +5,9 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: prod
-  memorySize: 256
+  memorySize: 512
   region: ap-southeast-1
+  timeout: 30
   # environment:
   # iamRoleStatements:
   #   - Effect: Allow
