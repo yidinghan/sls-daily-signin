@@ -1,16 +1,6 @@
 service:
   name: daily-signin
 
-# Add the serverless-webpack plugin
-plugins:
-  # - serverless-plugin-chrome
-
-custom:
-  chrome:
-    flags:
-      - --window-size=1280,1696 # Letter size
-      - --hide-scrollbars
-
 provider:
   name: aws
   runtime: nodejs8.10
