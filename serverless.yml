@@ -15,6 +15,12 @@ provider:
   #     Resource: "arn:aws:sns:*:*:lantouzi-bx"
 
 functions:
+  pgf:
+    handler: handler.pgf
+    events:
+      - http:
+          method: get
+          path: pgf
   debug:
     handler: handler.debug
     events:
